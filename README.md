@@ -51,37 +51,6 @@ export AWS_SECRET_ACCESS_KEY=yyy
 5. Click OK on all dialogs.
 
 
-# Setup aws credentials
-
-## Linux
-
-```bash
-export AWS_ACCESS_KEY_ID=
-export AWS_SECRET_ACCESS_KEY=
-```
-
-## Windows
-
-1. Press Windows Key → search for “Environment Variables”
-
-2. Click “Edit the system environment variables”
-
-3. In the System Properties dialog, click Environment Variables
-
-4. Under User variables (or System variables if for all users):
-
-   - Click New
-
-        - Variable name: AWS_ACCESS_KEY_ID
-
-        - Variable value: your access key ID
-
-   - Do the same for:
-
-        - AWS_SECRET_ACCESS_KEY
-
-5. Click OK on all dialogs.
-
 # Run the project
 
 ## Initialize project
@@ -121,7 +90,7 @@ After `Run project` step, you will get the output for the DNS name of the load b
 
 ## Initialize database
 
-After `Run project` step, a jumphost would be created on a EC2 instance, its public IP is availabel in the output with name `jumphost_public_ip`. We can connect to the database and elasticache from local machine via SSH tunnel (you will need your key pair and the jumphost public IP to create the tunnel). 
+After `Run project` step, a jumphost would be created on a EC2 instance, its public IP is available in the output with name `jumphost_public_ip`. We can connect to the database and elasticache from local machine via SSH tunnel (you will need your key pair and the jumphost public IP to create the tunnel). 
 
 Once tunnel established, connect to the database with your favorite tool and run the following init scripts against the database
 
@@ -148,9 +117,9 @@ At the end, if it's only for a test purpose, you can destroy all resources by ru
 
 # Parameters
 
-By default, the project deploy FeatBit into `us-west-2` region, which is defined in the (variables.tf)[./variables.tf] file, along with other parameters. If you want to any customization, please modify the file directly. 
+By default, the project deploy FeatBit into `us-west-2` region, which is defined in the [variables.tf](./variables.tf) file, along with other parameters. If you want to do any customizations, please modify the file directly. 
 
-Most of the parameters in the file can be left as it is, you must specify your values for the following parameters:
+Most of the parameters in the file can be left as it is, but you must specify your values for the following parameters:
 
 - **db_username** : the database username
 - **db_password** : the database password
