@@ -4,6 +4,10 @@ The objective of this project is to deploy FeatBit into AWS, it creates resouces
 By default, FeatBit runs on `http`, if you want to run FeatBit on `https`, you will need a certificat and then uncomment **line 113 and line 114** in [file](./modules/ecs-services/main.tf), you will also need to create a data block to fetch the certificat id
 
 
+# General infrastructure
+![](./aws-infra.png)
+
+
 # Prerequisites
 
 Before running the project, make sure:
