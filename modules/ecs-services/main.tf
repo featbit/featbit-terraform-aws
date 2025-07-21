@@ -96,7 +96,7 @@ resource "aws_lb_target_group" "da_target" {
     protocol            = "HTTP"
     matcher             = "200"
     timeout             = "3"
-    path                = "/api"
+    path                = "/health/liveness"
     unhealthy_threshold = "2"
   }
 
